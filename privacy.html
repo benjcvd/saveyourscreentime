@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>SaveYourScreenTime Privacy Policy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap"
+/>
+<style>
+  :root {
+    --bg: #f6f7fa;
+    --surface: #ffffff;
+    --ink: #151a23;
+    --ink-secondary: #4c5566;
+    --ink-faint: #7c8598;
+    --accent: #2e57c4;
+    --accent-soft: #eaf0ff;
+    --border: #e1e5ee;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1116;
+      --surface: #161b23;
+      --ink: #edf0f5;
+      --ink-secondary: #aab3c5;
+      --ink-faint: #6b7488;
+      --accent: #7ea0f7;
+      --accent-soft: #1b2740;
+      --border: #262d3a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); text-underline-offset: 2px; }
+  a:hover { text-decoration-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  img { max-width: 100%; }
+
+  .page { max-width: 760px; margin: 0 auto; padding: 4.5rem 1.5rem 6rem; }
+  .masthead { display: flex; align-items: center; gap: 1rem; margin-bottom: 2.75rem; }
+  .mark {
+    width: 44px; height: 44px; border-radius: 11px;
+    background: linear-gradient(160deg, #4d7cf0, #2140a3);
+    flex: none; display: grid; place-items: center;
+  }
+  .mark svg { width: 22px; height: 22px; }
+  .masthead-text .app-name { font-family: var(--serif); font-weight: 700; font-size: 1.05rem; letter-spacing: 0.01em; }
+  .masthead-text .doc-label {
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--ink-faint); margin-top: 0.15rem;
+  }
+
+  h1 {
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(2.1rem, 4.5vw, 2.65rem);
+    line-height: 1.12; text-wrap: balance; margin: 0 0 0.6rem; letter-spacing: -0.01em;
+  }
+  .updated { font-family: var(--mono); font-size: 0.8rem; color: var(--ink-faint); margin-bottom: 2.25rem; }
+  .lede {
+    font-family: var(--serif); font-size: 1.22rem; line-height: 1.55;
+    color: var(--ink); max-width: 62ch; margin-bottom: 3rem;
+  }
+  .lede strong { font-weight: 600; color: var(--accent); }
+
+  nav.toc { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 3.5rem; }
+  nav.toc .toc-label { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.75rem; }
+  nav.toc ol { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 2rem; }
+  nav.toc li { break-inside: avoid; margin-bottom: 0.5rem; }
+  nav.toc a { font-size: 0.92rem; color: var(--ink-secondary); text-decoration: none; }
+  nav.toc a:hover { color: var(--accent); }
+  nav.toc .num { font-family: var(--mono); color: var(--ink-faint); margin-right: 0.5em; font-size: 0.82rem; }
+
+  section { padding-top: 2.75rem; border-top: 1px solid var(--border); scroll-margin-top: 1.5rem; }
+  section:first-of-type { border-top: none; }
+  .section-head { display: flex; align-items: baseline; gap: 0.85rem; margin-bottom: 1rem; }
+  .section-num { font-family: var(--mono); color: var(--accent); font-size: 0.95rem; flex: none; }
+  h2 { font-family: var(--serif); font-weight: 600; font-size: 1.5rem; text-wrap: balance; margin: 0; }
+  section p { color: var(--ink-secondary); font-size: 1rem; max-width: 66ch; margin: 0 0 1rem; }
+  section p:last-child { margin-bottom: 0; }
+  section strong { color: var(--ink); font-weight: 600; }
+
+  .answer-card { display: flex; align-items: flex-start; gap: 0.85rem; background: var(--accent-soft); border-radius: 10px; padding: 1rem 1.15rem; margin: 1rem 0 1.25rem; }
+  .answer-card .glyph { font-family: var(--mono); color: var(--accent); font-weight: 500; font-size: 0.95rem; flex: none; line-height: 1.5; }
+  .answer-card p { color: var(--ink); margin: 0; font-size: 0.97rem; }
+
+  ul.plain { margin: 0 0 1rem; padding: 0; list-style: none; max-width: 66ch; }
+  ul.plain li { position: relative; padding-left: 1.15rem; color: var(--ink-secondary); margin-bottom: 0.55rem; }
+  ul.plain li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+  ul.plain strong { color: var(--ink); }
+
+  .contact-block {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.4rem 1.6rem; margin-top: 1rem;
+  }
+  .contact-block .who { font-size: 0.92rem; color: var(--ink-secondary); }
+  .contact-block a.email { font-family: var(--mono); font-size: 0.95rem; font-weight: 500; }
+
+  footer {
+    margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+    font-size: 0.82rem; color: var(--ink-faint); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+  }
+  footer a { color: var(--ink-faint); }
+
+  @media (max-width: 560px) {
+    nav.toc ol { columns: 1; }
+    .page { padding: 3rem 1.25rem 4rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="masthead">
+    <div class="mark">
+      <svg viewBox="0 0 100 100" fill="none">
+        <path d="M22 18h56c1.5 5-2 12-15 24-6 5.4-6 9.6 0 15 13 12 16.5 19 15 24H22c-1.5-5 2-12 15-24 6-5.4 6-9.6 0-15C24 30 20.5 23 22 18Z" fill="#fff"/>
+        <circle cx="50" cy="42" r="2.6" fill="#2e57c4"/>
+        <circle cx="50" cy="50" r="2" fill="#2e57c4"/>
+        <circle cx="50" cy="57" r="1.4" fill="#2e57c4"/>
+      </svg>
+    </div>
+    <div class="masthead-text">
+      <div class="app-name">SaveYourScreenTime</div>
+      <div class="doc-label">Privacy Policy</div>
+    </div>
+  </div>
+
+  <h1>Your Screen Time data stays on your phone. That's the whole policy.</h1>
+  <div class="updated">Last updated · September 16, 2026</div>
+
+  <p class="lede">
+    SaveYourScreenTime helps you track your weekly Apple Screen Time totals over the long
+    term. It has no servers, no accounts, and no analytics — <strong>everything you
+    enter or import is stored only on your own device.</strong> This page explains
+    exactly what that means.
+  </p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-label">On this page</div>
+    <ol>
+      <li><a href="#collect"><span class="num">01</span>What we collect</a></li>
+      <li><a href="#device"><span class="num">02</span>What's on your device</a></li>
+      <li><a href="#screenshots"><span class="num">03</span>Screenshot imports</a></li>
+      <li><a href="#third-parties"><span class="num">04</span>Third parties</a></li>
+      <li><a href="#control"><span class="num">05</span>Your control</a></li>
+      <li><a href="#children"><span class="num">06</span>Children's privacy</a></li>
+      <li><a href="#changes"><span class="num">07</span>Changes to this policy</a></li>
+      <li><a href="#contact"><span class="num">08</span>Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="collect">
+    <div class="section-head"><span class="section-num">01</span><h2>What we collect</h2></div>
+    <div class="answer-card">
+      <span class="glyph">→</span>
+      <p><strong>Nothing.</strong> SaveYourScreenTime doesn't have a server to send data to.
+      No account, no sign-in, no analytics SDK, no crash reporter, no ad network —
+      none of that exists in the app.</p>
+    </div>
+    <p>
+      We — the person who made this app — never see your Screen Time numbers, the
+      names of apps you use, or anything else you enter. There is nothing for us to
+      see: it never leaves your phone.
+    </p>
+  </section>
+
+  <section id="device">
+    <div class="section-head"><span class="section-num">02</span><h2>What's stored on your device</h2></div>
+    <p>The app saves the following, locally, using Apple's on-device storage (SwiftData) — the same mechanism Apple's own apps use to store data privately on your phone:</p>
+    <ul class="plain">
+      <li><strong>Weekly totals</strong> you enter manually or import from a screenshot</li>
+      <li><strong>App and category names and durations</strong> you've logged or imported</li>
+      <li><strong>Your Reduce / Neutral preferences</strong> for each app or category</li>
+      <li><strong>Optional notes</strong> you write for a given week</li>
+    </ul>
+    <p>None of this is backed up to iCloud, synced anywhere, or shared with any other app on your phone.</p>
+  </section>
+
+  <section id="screenshots">
+    <div class="section-head"><span class="section-num">03</span><h2>Screenshot imports</h2></div>
+    <p>
+      When you import a week from a Screen Time screenshot, the app reads the text
+      in the image using Apple's on-device text recognition (Vision framework) —
+      the same technology behind Live Text. This happens entirely on your phone;
+      the image is never uploaded anywhere.
+    </p>
+    <p>
+      The photo's data exists in memory only for the moment it takes to read the
+      text out of it — typically under a second — and is discarded immediately
+      afterward. It is never written to disk, never kept in memory afterward, and
+      never leaves your device. Only the numbers you review and confirm on the next
+      screen — which you can edit before saving — are stored.
+    </p>
+  </section>
+
+  <section id="third-parties">
+    <div class="section-head"><span class="section-num">04</span><h2>Third parties</h2></div>
+    <p>
+      SaveYourScreenTime doesn't use any third-party services, libraries, or SDKs that
+      collect data — no analytics, no advertising, no crash reporting, no
+      A/B-testing tools. There is simply nothing installed in the app that could
+      send your information anywhere, to us or to anyone else.
+    </p>
+  </section>
+
+  <section id="control">
+    <div class="section-head"><span class="section-num">05</span><h2>Your control</h2></div>
+    <ul class="plain">
+      <li><strong>Edit or delete</strong> any week's entry at any time, directly in the app</li>
+      <li><strong>Delete the app</strong> to permanently erase everything it stored — there's nothing left behind on a server, because there is no server</li>
+      <li><strong>Nothing to export or request</strong> from us, because we never had a copy in the first place</li>
+    </ul>
+  </section>
+
+  <section id="children">
+    <div class="section-head"><span class="section-num">06</span><h2>Children's privacy</h2></div>
+    <p>
+      SaveYourScreenTime is not directed at children and doesn't knowingly collect
+      information from anyone — which, given the app collects no information from
+      any user of any age, applies equally here.
+    </p>
+  </section>
+
+  <section id="changes">
+    <div class="section-head"><span class="section-num">07</span><h2>Changes to this policy</h2></div>
+    <p>
+      If this policy ever changes — for example, if a future version of the app adds
+      a feature that changes what's described above — this page will be updated and
+      the date at the top will change accordingly.
+    </p>
+  </section>
+
+  <section id="contact">
+    <div class="section-head"><span class="section-num">08</span><h2>Contact</h2></div>
+    <p>Questions about this policy or the app can be sent directly to the developer:</p>
+    <div class="contact-block">
+      <span class="who">SaveYourScreenTime is an independent, single-developer app.</span>
+      <a class="email" href="mailto:benjamin.chevignard@gmail.com">benjamin.chevignard@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>SaveYourScreenTime</span>
+    <span><a href="support.html">Support</a> · v1.0</span>
+  </footer>
+</div>
+</body>
+</html>

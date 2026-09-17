@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>SaveYourScreenTime Support</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap"
+/>
+<style>
+  :root {
+    --bg: #f6f7fa;
+    --surface: #ffffff;
+    --ink: #151a23;
+    --ink-secondary: #4c5566;
+    --ink-faint: #7c8598;
+    --accent: #2e57c4;
+    --accent-soft: #eaf0ff;
+    --border: #e1e5ee;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1116;
+      --surface: #161b23;
+      --ink: #edf0f5;
+      --ink-secondary: #aab3c5;
+      --ink-faint: #6b7488;
+      --accent: #7ea0f7;
+      --accent-soft: #1b2740;
+      --border: #262d3a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); text-underline-offset: 2px; }
+  a:hover { text-decoration-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  img { max-width: 100%; }
+
+  .page { max-width: 760px; margin: 0 auto; padding: 4.5rem 1.5rem 6rem; }
+  .masthead { display: flex; align-items: center; gap: 1rem; margin-bottom: 2.75rem; }
+  .mark {
+    width: 44px; height: 44px; border-radius: 11px;
+    background: linear-gradient(160deg, #4d7cf0, #2140a3);
+    flex: none; display: grid; place-items: center;
+  }
+  .mark svg { width: 22px; height: 22px; }
+  .masthead-text .app-name { font-family: var(--serif); font-weight: 700; font-size: 1.05rem; letter-spacing: 0.01em; }
+  .masthead-text .doc-label {
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--ink-faint); margin-top: 0.15rem;
+  }
+
+  h1 {
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(2rem, 4.3vw, 2.5rem);
+    line-height: 1.15; text-wrap: balance; margin: 0 0 0.9rem; letter-spacing: -0.01em;
+  }
+  .lede { font-family: var(--serif); font-size: 1.15rem; line-height: 1.55; color: var(--ink-secondary); max-width: 60ch; margin-bottom: 2.75rem; }
+
+  .contact-block {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    background: var(--accent-soft); border-radius: 12px; padding: 1.3rem 1.5rem; margin-bottom: 3.25rem;
+  }
+  .contact-block .who { font-size: 0.92rem; color: var(--ink); }
+  .contact-block .who strong { display: block; font-size: 1rem; margin-bottom: 0.15rem; }
+  .contact-block a.email { font-family: var(--mono); font-size: 0.95rem; font-weight: 500; white-space: nowrap; }
+
+  h2 { font-family: var(--serif); font-weight: 600; font-size: 1.2rem; margin: 0 0 0.6rem; }
+
+  .faq { display: flex; flex-direction: column; }
+  .faq-item { padding: 1.5rem 0; border-top: 1px solid var(--border); }
+  .faq-item:first-child { border-top: none; padding-top: 0; }
+  .faq-item p { color: var(--ink-secondary); max-width: 66ch; margin: 0; font-size: 0.98rem; }
+  .faq-item p + p { margin-top: 0.6rem; }
+  .faq-item strong { color: var(--ink); font-weight: 600; }
+
+  footer {
+    margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+    font-size: 0.82rem; color: var(--ink-faint); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+  }
+  footer a { color: var(--ink-faint); }
+
+  @media (max-width: 560px) {
+    .page { padding: 3rem 1.25rem 4rem; }
+    .contact-block { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="masthead">
+    <div class="mark">
+      <svg viewBox="0 0 100 100" fill="none">
+        <path d="M22 18h56c1.5 5-2 12-15 24-6 5.4-6 9.6 0 15 13 12 16.5 19 15 24H22c-1.5-5 2-12 15-24 6-5.4 6-9.6 0-15C24 30 20.5 23 22 18Z" fill="#fff"/>
+        <circle cx="50" cy="42" r="2.6" fill="#2e57c4"/>
+        <circle cx="50" cy="50" r="2" fill="#2e57c4"/>
+        <circle cx="50" cy="57" r="1.4" fill="#2e57c4"/>
+      </svg>
+    </div>
+    <div class="masthead-text">
+      <div class="app-name">SaveYourScreenTime</div>
+      <div class="doc-label">Support</div>
+    </div>
+  </div>
+
+  <h1>Questions, problems, ideas — all go straight to the person who made it.</h1>
+  <p class="lede">
+    SaveYourScreenTime is a small, independent app. There's no support ticket
+    system or chatbot — just write in and you'll hear back from the developer
+    directly.
+  </p>
+
+  <div class="contact-block">
+    <div class="who">
+      <strong>Get in touch</strong>
+      Bugs, questions, feature requests — all welcome.
+    </div>
+    <a class="email" href="mailto:benjamin.chevignard@gmail.com">benjamin.chevignard@gmail.com</a>
+  </div>
+
+  <h2>Common questions</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <p><strong>Why doesn't my total match Settings → Screen Time?</strong></p>
+      <p>
+        On some devices, Apple's own Screen Time total includes Always-On
+        Display and other system-level time that isn't attributed to any
+        individual app. Your per-app numbers are unaffected — this only
+        shows up as a gap between the total and the sum of your apps, which
+        the app explains right on the review screen when it's large enough
+        to look like a mistake.
+      </p>
+    </div>
+    <div class="faq-item">
+      <p><strong>How does importing a screenshot work?</strong></p>
+      <p>
+        Take a screenshot of your Screen Time week view in Settings, then
+        import it. The app reads the text directly on your phone using
+        Apple's on-device text recognition — the photo itself is never
+        uploaded anywhere and is discarded the moment the numbers are read
+        out of it. You always get to review and correct everything before
+        it's saved.
+      </p>
+    </div>
+    <div class="faq-item">
+      <p><strong>What does Reduce vs. Neutral mean?</strong></p>
+      <p>
+        Not all screen time is the same — checking a map or your banking app
+        isn't the same as doomscrolling. <strong>Reduce</strong> is time
+        you're actively trying to cut down; <strong>Neutral</strong> is
+        time that's unavoidable or fine as-is. You can reclassify any app
+        or category at any time from Trends → the settings icon.
+      </p>
+    </div>
+    <div class="faq-item">
+      <p><strong>Is my data private?</strong></p>
+      <p>
+        Yes — everything stays on your device. There's no account, no
+        server, and no analytics of any kind. See the full
+        <a href="privacy.html">Privacy Policy</a> for details.
+      </p>
+    </div>
+    <div class="faq-item">
+      <p><strong>Can I edit or delete a week I already logged?</strong></p>
+      <p>
+        Yes — tap any week in the Log tab to edit its total or notes, or
+        delete it entirely. Per-app numbers from an imported week aren't
+        individually editable yet; if one needs correcting, delete that
+        week and re-import the screenshot.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <span>SaveYourScreenTime</span>
+    <span><a href="mailto:benjamin.chevignard@gmail.com">Contact</a> · <a href="privacy.html">Privacy Policy</a></span>
+  </footer>
+</div>
+</body>
+</html>

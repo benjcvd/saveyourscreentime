@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>SaveYourScreenTime</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,700&family=Public+Sans:wght@400;500&display=swap"
+/>
+<style>
+  :root {
+    --bg: #f6f7fa; --ink: #151a23; --ink-secondary: #4c5566; --accent: #2e57c4;
+    --serif: "Source Serif 4", Georgia, serif;
+    --sans: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0e1116; --ink: #edf0f5; --ink-secondary: #aab3c5; --accent: #7ea0f7; }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; }
+  body {
+    background: var(--bg); color: var(--ink); font-family: var(--sans);
+    display: flex; align-items: center; justify-content: center; text-align: center;
+  }
+  .card { max-width: 420px; padding: 2rem; }
+  .mark {
+    width: 56px; height: 56px; border-radius: 14px; margin: 0 auto 1.25rem;
+    background: linear-gradient(160deg, #4d7cf0, #2140a3);
+    display: grid; place-items: center;
+  }
+  .mark svg { width: 28px; height: 28px; }
+  h1 { font-family: var(--serif); font-size: 1.5rem; margin: 0 0 0.5rem; }
+  p { color: var(--ink-secondary); margin: 0 0 1.5rem; font-size: 0.95rem; }
+  .links { display: flex; gap: 1.5rem; justify-content: center; }
+  a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="mark">
+      <svg viewBox="0 0 100 100" fill="none">
+        <path d="M22 18h56c1.5 5-2 12-15 24-6 5.4-6 9.6 0 15 13 12 16.5 19 15 24H22c-1.5-5 2-12 15-24 6-5.4 6-9.6 0-15C24 30 20.5 23 22 18Z" fill="#fff"/>
+        <circle cx="50" cy="42" r="2.6" fill="#2e57c4"/>
+        <circle cx="50" cy="50" r="2" fill="#2e57c4"/>
+        <circle cx="50" cy="57" r="1.4" fill="#2e57c4"/>
+      </svg>
+    </div>
+    <h1>SaveYourScreenTime</h1>
+    <p>Track your weekly Screen Time trends, entirely on your device.</p>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</body>
+</html>
